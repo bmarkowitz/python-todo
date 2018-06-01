@@ -1,5 +1,4 @@
 todos = []
-waiting = True
 
 def display_todos():
     print("\n#####\nTodo List: \n")
@@ -30,7 +29,7 @@ def delete_todo():
     except (ValueError, IndexError):
         print('** Invalid input. Try again. **')
 
-while(waiting):
+while True:
     display_todos()
     print('Menu:\n- Add todo: 1')
     print('- Delete todo: 2')
@@ -44,6 +43,6 @@ while(waiting):
             elif option == 2:
                 delete_todo()
             elif option == 4:
-                waiting = False
+                break
     except ValueError:
         print('** Invalid input. Try again. **\n')
